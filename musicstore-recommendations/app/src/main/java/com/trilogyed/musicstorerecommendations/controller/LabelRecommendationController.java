@@ -1,9 +1,9 @@
 package com.trilogyed.musicstorerecommendations.controller;
 
 import com.trilogyed.musicstorerecommendations.model.LabelRecommendation;
-import com.trilogyed.musicstorerecommendations.model.TrackRecommendation;
+
 import com.trilogyed.musicstorerecommendations.repository.LabelRepository;
-import com.trilogyed.musicstorerecommendations.repository.TrackRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

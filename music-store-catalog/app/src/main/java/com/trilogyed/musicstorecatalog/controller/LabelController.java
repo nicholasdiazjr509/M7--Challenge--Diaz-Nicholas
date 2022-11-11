@@ -1,7 +1,7 @@
 package com.trilogyed.musicstorecatalog.controller;
 
 import com.trilogyed.musicstorecatalog.model.Label;
-import com.trilogyed.musicstorecatalog.repository.LabelRespository;
+import com.trilogyed.musicstorecatalog.repository.LabelRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -15,7 +15,7 @@ import java.util.Optional;
 public class LabelController {
 
     @Autowired
-    private LabelRespository labelRepo;
+    private LabelRepository labelRepo;
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)

@@ -1,6 +1,6 @@
 package com.trilogyed.musicstorerecommendations.controller;
 
-import com.trilogyed.musicstorecatalog.model.ErrorResponse;
+import com.trilogyed.musicstorerecommendations.model.ErrorResponse;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
