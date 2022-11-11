@@ -1,6 +1,5 @@
 com\trilogyed\musicstorecatalog\model\Track.class
 com\trilogyed\musicstorecatalog\model\ErrorResponse.class
-com\trilogyed\musicstorecatalog\repository\LabelRespository.class
 com\trilogyed\musicstorecatalog\model\Label.class
 com\trilogyed\musicstorecatalog\repository\AlbumRepository.class
 com\trilogyed\musicstorecatalog\controller\ArtistController.class
@@ -8,6 +7,7 @@ com\trilogyed\musicstorecatalog\repository\ArtistRepository.class
 com\trilogyed\musicstorecatalog\repository\TrackRepository.class
 com\trilogyed\musicstorecatalog\model\Album.class
 com\trilogyed\musicstorecatalog\model\Artist.class
+com\trilogyed\musicstorecatalog\repository\LabelRepository.class
 com\trilogyed\musicstorecatalog\controller\TrackController.class
 com\trilogyed\musicstorecatalog\controller\ControllerExceptionHandler.class
 com\trilogyed\musicstorecatalog\controller\AlbumController.class
