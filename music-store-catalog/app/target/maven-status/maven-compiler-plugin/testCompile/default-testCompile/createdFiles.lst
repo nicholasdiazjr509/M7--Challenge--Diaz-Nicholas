@@ -1,0 +1,5 @@
+com\trilogyed\musicstorecatalog\controller\ArtistControllerTest.class
+com\trilogyed\musicstorecatalog\controller\LabelControllerTest.class
+com\trilogyed\musicstorecatalog\controller\AlbumControllerTest.class
+com\trilogyed\musicstorecatalog\controller\TrackControllerTest.class
+com\trilogyed\musicstorecatalog\MusicStoreCatalogApplicationTests.class
