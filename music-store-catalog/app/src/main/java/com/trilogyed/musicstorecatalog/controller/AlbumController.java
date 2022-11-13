@@ -21,8 +21,7 @@ public class AlbumController {
     @ResponseStatus(HttpStatus.OK)
     public List<Album> getAllAlbums() {
         List<Album> allAlbums = albumRepo.findAll();
-        /**  might need to change this after testing */
-        if (allAlbums == null || allAlbums.isEmpty()) {
+               if (allAlbums == null || allAlbums.isEmpty()) {
             throw new IllegalArgumentException("No albums were found!");
         } else {
             return allAlbums;

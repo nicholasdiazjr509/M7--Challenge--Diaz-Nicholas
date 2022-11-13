@@ -1,11 +1,14 @@
 package com.trilogyed.musicstorerecommendations.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-public class ErrorResponse {
+@RestControllerAdvice
+public class CustomErrorResponse {
     private String errorMsg;
     private int status;
     private String errorCode;
@@ -13,12 +16,14 @@ public class ErrorResponse {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss")
     private LocalDateTime timestamp;
 
-    public ErrorResponse(String errorMsg, String errorCode) {
-        this.errorMsg = errorMsg;
-        this.errorCode = errorCode;
+    public CustomErrorResponse(HttpStatus status, String message) {
+        this.errorMsg  = message;
+        this.status = status.value();
+        this.errorCode = status.toString();
+        this.timestamp = LocalDateTime.now();
     }
 
-    public ErrorResponse() {
+    public CustomErrorResponse() {
     }
 
     public String getErrorMsg() {
@@ -57,7 +62,7 @@ public class ErrorResponse {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ErrorResponse that = (ErrorResponse) o;
+        CustomErrorResponse that = (CustomErrorResponse) o;
         return status == that.status && Objects.equals(errorMsg, that.errorMsg) && Objects.equals(errorCode, that.errorCode) && Objects.equals(timestamp, that.timestamp);
     }
 
@@ -68,7 +73,7 @@ public class ErrorResponse {
 
     @Override
     public String toString() {
-        return "ErrorResponse{" +
+        return "CustomErrorResponse{" +
                 "errorMsg='" + errorMsg + '\'' +
                 ", status=" + status +
                 ", errorCode='" + errorCode + '\'' +
